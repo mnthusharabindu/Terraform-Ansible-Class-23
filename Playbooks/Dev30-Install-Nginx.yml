@@ -14,11 +14,13 @@
 - name: Start Nginx Service
   shell: service nginx start
 
-  # - name: Delete Existing File
-  #   shell: rm -rf /tmp/passwd
-  # - name: CopyFile
-  #   copy:
-  #     src: /etc/passwd
-  #     dest: /tmp/passwd
-  # - name: Read File
-  #   shell: cat /tmp/passwd
+- name: Delete Existing File
+  shell: rm -rf /tmp/passwd
+
+- name: CopyFile
+  copy:
+    src: /etc/passwd
+    dest: /tmp/passwd
+
+- name: Read File
+  shell: cat /tmp/passwd
