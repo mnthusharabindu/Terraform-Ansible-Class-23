@@ -5,15 +5,15 @@
   become: yes
   become_user: root
   tasks:
-  - name: Perform Apt Update
-    shell: apt update
+- name: Perform Apt Update
+  shell: apt update
 
-  - name: Install Nginx
-    shell: apt install -y nginx
+- name: Install Nginx
+  shell: apt install -y nginx
 
-  - name: Start Nginx Service
-    shell: service nginx start
-    
+- name: Start Nginx Service
+  shell: service nginx start
+
   # - name: Delete Existing File
   #   shell: rm -rf /tmp/passwd
   # - name: CopyFile
